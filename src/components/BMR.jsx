@@ -20,10 +20,7 @@ const BMR = () => {
 
   return (
     <div className=" grid border border-secondary items-center justify-center content-center  rounded-2xl shadow-xl bg-primary px-2 h-[470px] w-[420px] my-3 ">
-      <form
-        // onSubmit={handleBMRSubmit}
-        className="flex flex-col items-center justify-evenly font-bold "
-      >
+      <form className="flex flex-col items-center justify-evenly font-bold ">
         <div className="border border-secondary rounded-2xl shadow-xl bg-primary h-full px-2 py-3 my-2 space-x-2">
           <label htmlFor="weight">Weight</label>
           <input
@@ -38,7 +35,7 @@ const BMR = () => {
           <label htmlFor="height">Height</label>
           <input
             onChange={(e) => handleHeightChange(e)}
-            className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2"
+            className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2 "
             type="number"
             id="height"
           />
@@ -58,6 +55,7 @@ const BMR = () => {
           <label>Gender:</label>
           <div className=" space-x-1">
             <input
+              className="cursor-pointer"
               type="radio"
               name="gender"
               value="male"
@@ -65,24 +63,29 @@ const BMR = () => {
               onChange={(e) => handleGenderChange(e)}
               defaultChecked
             />
-            <label htmlFor="male">Male</label>
+            <label htmlFor="male" className="cursor-pointer">
+              Male
+            </label>
           </div>
-          <div className=" space-x-1">
+          <div className=" space-x-1 cursor-pointer">
             <input
+              className="cursor-pointer"
               type="radio"
               name="gender"
               value="female"
               id="female"
               onChange={(e) => handleGenderChange(e)}
             />
-            <label htmlFor="female">Female</label>
+            <label htmlFor="female" className="cursor-pointer">
+              Female
+            </label>
           </div>
         </div>
 
         <div className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary w-full flex   my-2 ">
           <button
             onClick={handleBMRSubmit}
-            className=" w-[150px] my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl"
+            className=" w-[150px] my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl hover:shadow-2xl"
           >
             BMR
           </button>

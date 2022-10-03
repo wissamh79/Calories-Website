@@ -7,13 +7,13 @@ const initialState = {
   height: null,
   age: null,
   gender: "male",
-  bmr: null,
+  bmr: 0,
   basicNeedsInput: null,
-  basicNeeds: null,
+  basicNeeds: 0,
   activities: 1.2,
   activitiesExplain: "Inactive don't exercise light office activity",
-  dailyCaloriesInput: null,
-  dailyCalories: null,
+  dailyCaloriesInput: 0,
+  dailyCalories: 0,
   goal: "loseWeight",
 };
 

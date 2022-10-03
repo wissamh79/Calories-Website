@@ -30,6 +30,7 @@ const Calories = () => {
             <label>Activities :</label>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="gender"
                 value="1.2"
@@ -37,47 +38,61 @@ const Calories = () => {
                 onChange={(e) => handleActivitiesChange(e)}
                 defaultChecked
               />
-              <label htmlFor="1.2">1.2</label>
+              <label htmlFor="1.2" className="cursor-pointer">
+                1.2
+              </label>
             </div>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="gender"
-                value="1.3"
+                value="1.375"
                 id="1.3"
                 onChange={(e) => handleActivitiesChange(e)}
               />
-              <label htmlFor="1.3">1.3</label>
+              <label htmlFor="1.3" className="cursor-pointer">
+                1.3
+              </label>
             </div>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="gender"
-                value="1.5"
+                value="1.55"
                 id="1.5"
                 onChange={(e) => handleActivitiesChange(e)}
               />
-              <label htmlFor="1.5">1.5</label>
+              <label htmlFor="1.5" className="cursor-pointer">
+                1.5
+              </label>
             </div>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="gender"
-                value="1.7"
+                value="1.725"
                 id="1.7"
                 onChange={(e) => handleActivitiesChange(e)}
               />
-              <label htmlFor="1.7">1.7</label>
+              <label htmlFor="1.7" className="cursor-pointer">
+                1.7
+              </label>
             </div>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="gender"
                 value="1.9"
                 id="1.9"
                 onChange={(e) => handleActivitiesChange(e)}
               />
-              <label htmlFor="1.9">1.9</label>
+              <label htmlFor="1.9" className="cursor-pointer">
+                1.9
+              </label>
             </div>
           </div>
 
@@ -90,7 +105,7 @@ const Calories = () => {
           <div className="border border-secondary rounded-2xl shadow-xl bg-primary px-4 py-1 my-2 space-x-2">
             <button
               onClick={handleBasicNeedsSubmit}
-              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl"
+              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl hover:shadow-2xl"
             >
               Basic Needs
             </button>
@@ -112,6 +127,7 @@ const Calories = () => {
             <label>Goal :</label>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="goal"
                 value="loseWeight"
@@ -119,23 +135,28 @@ const Calories = () => {
                 onChange={(e) => handleGoalChange(e)}
                 defaultChecked
               />
-              <label htmlFor="loseWeight">Lose Weight</label>
+              <label htmlFor="loseWeight" className="cursor-pointer">
+                Lose Weight
+              </label>
             </div>
             <div className=" space-x-1">
               <input
+                className="cursor-pointer"
                 type="radio"
                 name="goal"
                 value="gainWeight"
                 id="gainWeight"
                 onChange={(e) => handleGoalChange(e)}
               />
-              <label htmlFor="gainWeight">Gain Weight</label>
+              <label htmlFor="gainWeight" className="cursor-pointer">
+                Gain Weight
+              </label>
             </div>
           </div>
           <div className="border border-secondary rounded-2xl shadow-xl bg-primary px-4 py-1 my-2 space-x-2">
             <button
               onClick={handleGetDailyCaloriesSubmit}
-              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl"
+              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl hover:shadow-2xl"
             >
               Daily Calories
             </button>

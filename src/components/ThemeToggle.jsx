@@ -12,14 +12,14 @@ const ThemeToggle = () => {
           className="flex items-center cursor-pointer"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          <HiSun className="text-primary text-2xl mr-2" /> Light
+          <HiSun className="text-primary text-2xl mr-2" />
         </div>
       ) : (
         <div
           className="flex items-center cursor-pointer"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          <HiMoon className="text-primary text-2xl mr-2" /> Dark
+          <HiMoon className="text-primary text-2xl mr-2" />
         </div>
       )}
     </div>

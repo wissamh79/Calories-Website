@@ -41,7 +41,7 @@ const CaloriesProvider = ({ children }) => {
       if (state.weight == null && state.height == null && state.age == null) {
         dispatch({
           type: actions.init,
-          data: { bmr: null },
+          data: { bmr: 0 },
         });
       } else {
         if (state.gender == "male") {
@@ -140,11 +140,6 @@ const CaloriesProvider = ({ children }) => {
         type: actions.init,
         data: { basicNeeds },
       });
-    } else {
-      dispatch({
-        type: actions.init,
-        data: { basicNeeds: null },
-      });
     }
   };
   const handleGoalChange = (e) => {
@@ -162,40 +157,27 @@ const CaloriesProvider = ({ children }) => {
     });
   };
   const getDailyCalories = () => {
-    if (state.basicNeeds == null) {
-      dispatch({
-        type: actions.init,
-        data: { dailyCalories: null },
-      });
-    } else {
+    if (state.dailyCaloriesInput) {
       if (state.goal == "loseWeight") {
         const dailyCalories =
-          Math.round(parseInt(state.basicNeeds)) - state.dailyCaloriesInput;
+          parseInt(state.basicNeeds) - parseInt(state.dailyCaloriesInput);
         dispatch({
           type: actions.init,
           data: { dailyCalories },
         });
       } else if (state.goal == "gainWeight") {
-        if (state.dailyCaloriesInput) {
-          const dailyCalories =
-            Math.round(parseInt(state.basicNeeds)) +
-            parseInt(state.dailyCaloriesInput);
+        const dailyCalories =
+          parseInt(state.basicNeeds) + parseInt(state.dailyCaloriesInput);
 
-          dispatch({
-            type: actions.init,
-            data: { dailyCalories },
-          });
-        } else {
-          return;
-        }
+        dispatch({
+          type: actions.init,
+          data: { dailyCalories },
+        });
+      } else {
+        return;
       }
     }
   };
-
-  // useEffect(() => {
-
-  //   window.addEventListener(state.activities, activitiesSwitch());
-  // }, []);
 
   return (
     <CaloriesContext.Provider
