@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,14 +11,23 @@ const Footer = () => {
 
         <div className=" flex space-x-5 ">
           <div className="">
-            <a href="https://github.com/wissamh79" target="_blank">
+            <a
+              href="https://github.com/wissamh79"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
           </div>
-          {/* <div className="flex space-x-2 ">
-            <FiMail />
-            <p className="">wsamh797@gmail.com</p>
-          </div> */}
+          <div className="">
+            <a
+              href="https://twitter.com/Wisamh79"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex justify-center md:justify-end md:w-[50%] font-bold ">

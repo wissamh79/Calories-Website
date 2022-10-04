@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import { reducer, actions, initialState } from "./state";
 import CaloriesContext from "./CaloriesContext";
 
@@ -44,14 +44,14 @@ const CaloriesProvider = ({ children }) => {
           data: { bmr: 0 },
         });
       } else {
-        if (state.gender == "male") {
+        if (state.gender === "male") {
           const bmr =
             13.8 * state.weight + 5 * state.height - 6.8 * state.age + 66;
           dispatch({
             type: actions.init,
             data: { bmr },
           });
-        } else if (state.gender == "female") {
+        } else if (state.gender === "female") {
           const bmr =
             9.6 * state.weight + 1.8 * state.height - 4.7 * state.age + 655;
           dispatch({
@@ -158,14 +158,14 @@ const CaloriesProvider = ({ children }) => {
   };
   const getDailyCalories = () => {
     if (state.dailyCaloriesInput) {
-      if (state.goal == "loseWeight") {
+      if (state.goal === "loseWeight") {
         const dailyCalories =
           parseInt(state.basicNeeds) - parseInt(state.dailyCaloriesInput);
         dispatch({
           type: actions.init,
           data: { dailyCalories },
         });
-      } else if (state.goal == "gainWeight") {
+      } else if (state.goal === "gainWeight") {
         const dailyCalories =
           parseInt(state.basicNeeds) + parseInt(state.dailyCaloriesInput);
 
