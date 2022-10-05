@@ -1,33 +1,24 @@
 import React from "react";
 import useCalories from "../context/caloriesContext/useCalories";
+import { actions } from "../context/caloriesContext/state";
 
 const Calories = () => {
   const {
     state: { bmr, basicNeeds, dailyCalories, activitiesExplain },
+    dispatch,
     handleActivitiesChange,
-    handleBasicNeedsInputChange,
+
     getBasicNeeds,
-    handleGoalChange,
-    handleDailyCaloriesInputChange,
+
     getDailyCalories,
   } = useCalories();
 
-  const handleBasicNeedsSubmit = (e) => {
-    e.preventDefault();
-
-    getBasicNeeds();
-  };
-  const handleGetDailyCaloriesSubmit = (e) => {
-    e.preventDefault();
-
-    getDailyCalories();
-  };
   return (
-    <div className="h-[470]">
-      <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly md:my-5 font-bold py-3">
+    <div className="h-[470] w-[420px] ">
+      <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly md:my-5  py-3">
         <div>
-          <div className="flex border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary my-3 py-2 space-x-3">
-            <label>Activities :</label>
+          <div className="flex border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold my-3 py-2 space-x-3">
+            <label className="font-bold">Activities :</label>
             <div className=" space-x-1">
               <input
                 className="cursor-pointer"
@@ -97,27 +88,34 @@ const Calories = () => {
           </div>
 
           <div className="border border-secondary text-center rounded-2xl shadow-xl bg-primary ">
-            <p className="text-1xl max-w-[400px] h-[50px] text-center items-center justify-center ">
+            <p className="text-1xl w-[395px] h-[50px] text-center items-center justify-center ">
               {activitiesExplain}
             </p>
           </div>
 
           <div className="border border-secondary rounded-2xl shadow-xl bg-primary px-4 py-1 my-2 space-x-2">
             <button
-              onClick={handleBasicNeedsSubmit}
-              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl hover:shadow-2xl"
+              onClick={(e) => {
+                getBasicNeeds(e);
+              }}
+              className=" my-2  p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold w-[135px] hover:shadow-2xl"
             >
               Basic Needs
             </button>
             <input
-              onChange={(e) => handleBasicNeedsInputChange(e)}
-              className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2 text-center"
+              onChange={(e) =>
+                dispatch({
+                  type: actions.init,
+                  data: { basicNeedsInput: e.target.value },
+                })
+              }
+              className="bg-primary border border-input rounded-2xl shadow-xl w-[225px]  px-4 py-2 text-center"
               type="number"
               placeholder={bmr ? bmr : "Your BMR is ?"}
             />
           </div>
           <div className="border border-secondary text-center rounded-2xl shadow-xl bg-primary ">
-            <p className="text-1xl h-[30px]">{basicNeeds}</p>
+            <p className="text-1xl h-[30px] font-bold">{basicNeeds}</p>
           </div>
         </div>
       </form>
@@ -132,10 +130,18 @@ const Calories = () => {
                 name="goal"
                 value="loseWeight"
                 id="loseWeight"
-                onChange={(e) => handleGoalChange(e)}
+                onChange={(e) =>
+                  dispatch({
+                    type: actions.init,
+                    data: { goal: e.target.value },
+                  })
+                }
                 defaultChecked
               />
-              <label htmlFor="loseWeight" className="cursor-pointer">
+              <label
+                htmlFor="loseWeight"
+                className="font-semibold cursor-pointer"
+              >
                 Lose Weight
               </label>
             </div>
@@ -146,25 +152,40 @@ const Calories = () => {
                 name="goal"
                 value="gainWeight"
                 id="gainWeight"
-                onChange={(e) => handleGoalChange(e)}
+                onChange={(e) =>
+                  dispatch({
+                    type: actions.init,
+                    data: { goal: e.target.value },
+                  })
+                }
               />
-              <label htmlFor="gainWeight" className="cursor-pointer">
+              <label
+                htmlFor="gainWeight"
+                className="font-semibold cursor-pointer"
+              >
                 Gain Weight
               </label>
             </div>
           </div>
           <div className="border border-secondary rounded-2xl shadow-xl bg-primary px-4 py-1 my-2 space-x-2">
             <button
-              onClick={handleGetDailyCaloriesSubmit}
-              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl hover:shadow-2xl"
+              onClick={(e) => {
+                getDailyCalories(e);
+              }}
+              className=" my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl w-[135px] hover:shadow-2xl"
             >
               Daily Calories
             </button>
             <input
-              className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2"
+              className="bg-primary border border-input rounded-2xl shadow-xl w-[225px] font-semibold text=center px-4 py-2"
               type="number"
-              id="age"
-              onChange={(e) => handleDailyCaloriesInputChange(e)}
+              placeholder={"Number 100-500"}
+              onChange={(e) =>
+                dispatch({
+                  type: actions.init,
+                  data: { dailyCaloriesInput: e.target.value },
+                })
+              }
             />
           </div>
 

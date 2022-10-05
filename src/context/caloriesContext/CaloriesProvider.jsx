@@ -7,36 +7,8 @@ import React from "react";
 const CaloriesProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleWeightChange = (e) => {
-    const weight = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { weight },
-    });
-  };
-  const handleHeightChange = (e) => {
-    const height = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { height },
-    });
-  };
-  const handleAgeChange = (e) => {
-    const age = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { age },
-    });
-  };
-  const handleGenderChange = (e) => {
-    const gender = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { gender },
-    });
-  };
-
-  const getBMR = () => {
+  const getBMR = (e) => {
+    e.preventDefault();
     try {
       if (state.weight == null && state.height == null && state.age == null) {
         dispatch({
@@ -80,7 +52,7 @@ const CaloriesProvider = ({ children }) => {
         });
         break;
 
-      case "1.3":
+      case "1.375":
         dispatch({
           type: actions.init,
           data: {
@@ -88,7 +60,7 @@ const CaloriesProvider = ({ children }) => {
           },
         });
         break;
-      case "1.5":
+      case "1.55":
         dispatch({
           type: actions.init,
           data: {
@@ -96,13 +68,14 @@ const CaloriesProvider = ({ children }) => {
           },
         });
         break;
-      case "1.7":
+      case "1.725":
         dispatch({
           type: actions.init,
           data: {
             activitiesExplain: "High intensity sport from 6 to 7 days",
           },
         });
+
         break;
       case "1.9":
         dispatch({
@@ -117,17 +90,10 @@ const CaloriesProvider = ({ children }) => {
       default:
         break;
     }
+  };
 
-    console.log(state.activitiesExplain);
-  };
-  const handleBasicNeedsInputChange = (e) => {
-    const basicNeedsInput = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { basicNeedsInput },
-    });
-  };
-  const getBasicNeeds = () => {
+  const getBasicNeeds = (e) => {
+    e.preventDefault();
     if (state.basicNeedsInput) {
       const basicNeeds = (state.basicNeedsInput * state.activities).toFixed(2);
       dispatch({
@@ -142,21 +108,9 @@ const CaloriesProvider = ({ children }) => {
       });
     }
   };
-  const handleGoalChange = (e) => {
-    const goal = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { goal },
-    });
-  };
-  const handleDailyCaloriesInputChange = (e) => {
-    const dailyCaloriesInput = e.target.value;
-    dispatch({
-      type: actions.init,
-      data: { dailyCaloriesInput },
-    });
-  };
-  const getDailyCalories = () => {
+
+  const getDailyCalories = (e) => {
+    e.preventDefault();
     if (state.dailyCaloriesInput) {
       if (state.goal === "loseWeight") {
         const dailyCalories =
@@ -184,16 +138,12 @@ const CaloriesProvider = ({ children }) => {
       value={{
         state,
         dispatch,
-        handleWeightChange,
-        handleHeightChange,
-        handleAgeChange,
-        handleGenderChange,
+
         getBMR,
         handleActivitiesChange,
-        handleBasicNeedsInputChange,
+
         getBasicNeeds,
-        handleGoalChange,
-        handleDailyCaloriesInputChange,
+
         getDailyCalories,
       }}
     >
