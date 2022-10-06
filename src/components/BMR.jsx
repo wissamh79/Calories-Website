@@ -11,9 +11,9 @@ const BMR = () => {
   } = useCalories();
 
   return (
-    <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  md:mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  ">
-      <form className="flex flex-col items-center justify-center  font-semibold w-full  md:px-2  ">
-        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary md:w-full mx-2 px-2 py-3  my-2 ">
+    <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  ">
+      <form className="flex flex-col items-center justify-center  font-semibold w-full   ">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full mx-2 px-2 py-3  my-2 ">
           <label className="mx-3" htmlFor="weight">
             Weight
           </label>
@@ -30,7 +30,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary md:w-full  px-2 py-3 my-2 ">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full  px-2 py-3 my-2 ">
           <label className="mx-3" htmlFor="height">
             Height
           </label>
@@ -47,7 +47,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary md:w-full  px-2 py-3 my-2 space-x-6">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full  px-2 py-3 my-2 space-x-6">
           <label className="pl-5" htmlFor="age">
             Age
           </label>
@@ -64,7 +64,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary md:w-full p-3 space-x-4 my-2 ">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full p-3 space-x-4 my-2 ">
           <label className="font-bold">Gender :</label>
           <div className=" space-x-1">
             <input
@@ -105,7 +105,7 @@ const BMR = () => {
           </div>
         </div>
 
-        <div className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary  flex md:w-full  my-2 ">
+        <div className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary  flex w-[300px] md:w-full  my-2 ">
           <button
             onClick={(e) => {
               getBMR(e);
