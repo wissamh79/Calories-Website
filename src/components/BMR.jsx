@@ -24,7 +24,7 @@ const BMR = () => {
                 data: { weight: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl  py-2"
+            className="bg-primary border border-input rounded-2xl shadow-xl text-center  py-2"
             type="number"
             id="weight"
           />
@@ -41,7 +41,7 @@ const BMR = () => {
                 data: { height: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl  py-2 "
+            className="bg-primary border border-input rounded-2xl shadow-xl text-center  py-2 "
             type="number"
             id="height"
           />
@@ -58,7 +58,7 @@ const BMR = () => {
                 data: { age: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl py-2"
+            className="bg-primary border border-input rounded-2xl text-center shadow-xl py-2"
             type="number"
             id="age"
           />
@@ -105,7 +105,10 @@ const BMR = () => {
           </div>
         </div>
 
-        <div className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary w-full flex   my-2 ">
+        <div
+          className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary w-full flex   my-2 "
+          onContextMenu="return false"
+        >
           <button
             onClick={(e) => {
               getBMR(e);

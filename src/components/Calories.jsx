@@ -15,7 +15,7 @@ const Calories = () => {
 
   return (
     <div className="  flex flex-col items-center justify-center md:h-[470px] w-[350px] sm:w-[400px]    md:w-[420px]   ">
-      <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-1   px-2  py-3">
+      <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-3 md:my-1   px-2  py-3">
         <div>
           <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold   my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold">Activities :</label>
@@ -121,7 +121,7 @@ const Calories = () => {
           </div>
         </div>
       </form>
-      <div className=" border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-1   font-bold px-2 py-3   ">
+      <div className=" border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full mb-5 mt-3  md:my-1 mb-   font-bold px-2 py-3   ">
         <form>
           <div className="flex flex-col md:flex-row border border-secondary items-center justify-center rounded-2xl shadow-xl bg-primary my-1 py-1  space-y-1 md:space-x-3">
             <label>Goal :</label>

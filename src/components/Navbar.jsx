@@ -12,7 +12,7 @@ const Navbar = () => {
           Calculator
         </p>
       </div>
-      <div className="flex justify-end md:justify-start w-[51%] ">
+      <div className="flex justify-center md:justify-start w-[51%] ">
         <ThemeToggle />
       </div>
     </div>
