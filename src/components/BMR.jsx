@@ -12,7 +12,7 @@ const BMR = () => {
 
   return (
     <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  ">
-      <form className="flex flex-col items-center justify-center  font-semibold w-full   ">
+      <form className="flex flex-col items-center justify-center  font-semibold w-full  md:px-2 ">
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full mx-2 px-2 py-3  my-2 ">
           <label className="mx-3" htmlFor="weight">
             Weight
@@ -85,7 +85,7 @@ const BMR = () => {
               Male
             </label>
           </div>
-          <div className=" space-x-1 cursor-pointer">
+          <div className=" space-x-1 cursor-default md:cursor-pointer">
             <input
               className=" cursor-pointer"
               type="radio"
@@ -110,7 +110,7 @@ const BMR = () => {
             onClick={(e) => {
               getBMR(e);
             }}
-            className=" w-[150px] my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold hover:shadow-2xl"
+            className=" w-[150px] my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold cursor-pointer hover:shadow-2xl"
           >
             BMR
           </button>
