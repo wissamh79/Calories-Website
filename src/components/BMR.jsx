@@ -11,10 +11,12 @@ const BMR = () => {
   } = useCalories();
 
   return (
-    <div className=" grid border border-secondary items-center justify-center content-center  rounded-2xl shadow-xl bg-primary  px-2 h-[470px] w-[420px] my-3 ">
-      <form className="flex flex-col items-center justify-evenly font-semibold ">
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-2">
-          <label htmlFor="weight">Weight</label>
+    <div className=" grid border border-secondary items-center justify-center content-center  rounded-2xl shadow-xl bg-primary   px-2 h-[425px] md:h-[470px] sm:w-[400px] md:w-[420px] my-3  ">
+      <form className="flex flex-col items-center justify-evenly font-semibold w-full  ">
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3  my-2 ">
+          <label className="mx-2" htmlFor="weight">
+            Weight
+          </label>
           <input
             onChange={(e) =>
               dispatch({
@@ -22,14 +24,16 @@ const BMR = () => {
                 data: { weight: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2"
+            className="bg-primary border border-input rounded-2xl shadow-xl  py-2"
             type="number"
             id="weight"
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-3">
-          <label htmlFor="height">Height</label>
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 ">
+          <label className="mx-2" htmlFor="height">
+            Height
+          </label>
           <input
             onChange={(e) =>
               dispatch({
@@ -37,13 +41,13 @@ const BMR = () => {
                 data: { height: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2 "
+            className="bg-primary border border-input rounded-2xl shadow-xl  py-2 "
             type="number"
             id="height"
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-4">
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-5">
           <label className="pl-4" htmlFor="age">
             Age
           </label>
@@ -54,7 +58,7 @@ const BMR = () => {
                 data: { age: e.target.value },
               })
             }
-            className="bg-primary border border-input rounded-2xl shadow-xl px-4 py-2"
+            className="bg-primary border border-input rounded-2xl shadow-xl py-2"
             type="number"
             id="age"
           />

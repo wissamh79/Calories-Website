@@ -3,8 +3,8 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row border border-secondary rounded-2xl shadow-xl bg-primary  max-w-[1140px] w-full mx-auto py-2 md:py-0  my-3 space-y-3 md:space-y-0 ">
-      <div className="flex items-center justify-center md:justify-start text-accent md:w-[50%]  space-x-3 mx-5 ">
+    <div className="flex flex-col md:flex-row border border-secondary rounded-2xl shadow-xl bg-primary  md:max-w-[1140px] mx-4 w-[375px] sm:w-full sm:mx-2  py-2 md:py-0  my-3 space-y-3 md:space-y-0 ">
+      <div className="flex items-center justify-center md:justify-start text-accent md:w-[50%]  space-x-3 md:mx-5 ">
         <div className="  font-semibold">
           <p className="">Contact :</p>
         </div>

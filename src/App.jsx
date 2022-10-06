@@ -9,9 +9,11 @@ const App = () => {
   return (
     <ThemeProvider>
       <CaloriesProvider>
-        <Navbar />
-        <Home />
-        <Footer />
+        <div className="flex flex-col items-center justify-center">
+          <Navbar />
+          <Home />
+          <Footer />
+        </div>
       </CaloriesProvider>
     </ThemeProvider>
   );
