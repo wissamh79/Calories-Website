@@ -121,11 +121,16 @@ const CaloriesProvider = ({ children }) => {
           type: actions.init,
           data: { basicNeeds },
         });
-      } else {
+      } else if (state.bmr) {
         const basicNeeds = (state.bmr * state.activities).toFixed(2);
         dispatch({
           type: actions.init,
           data: { basicNeeds },
+        });
+      } else {
+        dispatch({
+          type: actions.init,
+          data: { basicNeeds: 0 },
         });
       }
     } catch (e) {

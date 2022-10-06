@@ -14,12 +14,12 @@ const Calories = () => {
   } = useCalories();
 
   return (
-    <div className="  flex flex-col items-center justify-center md:h-[470px] w-[350px] sm:w-[400px]    md:w-[420px]   ">
+    <div className="  flex flex-col items-center justify-center md:h-[470px]     md:w-[420px] mx-2  ">
       <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-3 md:my-1   px-2  py-3">
         <div>
           <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold   my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold">Activities :</label>
-            <div className="flex space-x-2">
+            <div className="flex space-x-4">
               <div className=" space-x-1">
                 <input
                   className="cursor-pointer"
@@ -125,7 +125,7 @@ const Calories = () => {
         <form>
           <div className="flex flex-col md:flex-row border border-secondary items-center justify-center rounded-2xl shadow-xl bg-primary my-1 py-1  space-y-1 md:space-x-3">
             <label>Goal :</label>
-            <div className="flex space-x-2">
+            <div className="flex items-center justify-center  space-x-4 ">
               <div className=" space-x-1">
                 <input
                   className="cursor-pointer"
@@ -143,14 +143,14 @@ const Calories = () => {
                 />
                 <label
                   htmlFor="loseWeight"
-                  className="font-semibold cursor-pointer"
+                  className="font-semibold cursor-pointer "
                 >
                   Lose Weight
                 </label>
               </div>
               <div className=" space-x-1">
                 <input
-                  className="cursor-pointer"
+                  className="cursor-pointer pt-1"
                   type="radio"
                   name="goal"
                   value="gainWeight"
@@ -181,9 +181,9 @@ const Calories = () => {
               Daily Calories
             </button>
             <input
-              className=" my-2 bg-primary border border-input rounded-2xl shadow-xl h-[50px]  w-[250px] md:w-[225px] font-semibold text=center px-2  py-2"
+              className=" my-2 bg-primary border border-input rounded-2xl shadow-xl h-[50px]  w-[250px] md:w-[225px] font-semibold text-center px-2  py-2"
               type="number"
-              placeholder={"   Number 100-500"}
+              placeholder={"Number 100-500"}
               onChange={(e) =>
                 dispatch({
                   type: actions.init,

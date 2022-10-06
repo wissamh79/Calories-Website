@@ -11,10 +11,10 @@ const BMR = () => {
   } = useCalories();
 
   return (
-    <div className=" grid border border-secondary items-center justify-center content-center  rounded-2xl shadow-xl bg-primary   px-2 h-[425px] md:h-[470px] sm:w-[400px] md:w-[420px] my-3  ">
-      <form className="flex flex-col items-center justify-evenly font-semibold w-full  ">
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3  my-2 ">
-          <label className="mx-2" htmlFor="weight">
+    <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary   md:px-2 h-[425px] md:h-[470px]  md:w-[420px] my-3  ">
+      <form className="flex flex-col items-center justify-center  font-semibold w-full px-2 mx-3 ">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-full  px-2 py-3  my-2 ">
+          <label className="mx-3" htmlFor="weight">
             Weight
           </label>
           <input
@@ -30,8 +30,8 @@ const BMR = () => {
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 ">
-          <label className="mx-2" htmlFor="height">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-full  px-2 py-3 my-2 ">
+          <label className="mx-3" htmlFor="height">
             Height
           </label>
           <input
@@ -47,8 +47,8 @@ const BMR = () => {
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-5">
-          <label className="pl-4" htmlFor="age">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-full  px-2 py-3 my-2 space-x-6">
+          <label className="pl-5" htmlFor="age">
             Age
           </label>
           <input
@@ -64,7 +64,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary p-3 space-x-3 my-2 w-full">
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-full p-3 space-x-4 my-2 ">
           <label className="font-bold">Gender :</label>
           <div className=" space-x-1">
             <input
@@ -106,7 +106,7 @@ const BMR = () => {
         </div>
 
         <div
-          className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary w-full flex   my-2 "
+          className="border border-secondary  justify-evenly rounded-2xl shadow-xl bg-primary  flex w-full  my-2 "
           onContextMenu="return false"
         >
           <button
