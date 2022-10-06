@@ -13,7 +13,7 @@ const BMR = () => {
   return (
     <div className=" grid border border-secondary items-center justify-center content-center  rounded-2xl shadow-xl bg-primary  px-2 h-[470px] w-[420px] my-3 ">
       <form className="flex flex-col items-center justify-evenly font-semibold ">
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary h-full px-2 py-3 my-2 space-x-2">
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-2">
           <label htmlFor="weight">Weight</label>
           <input
             onChange={(e) =>
@@ -28,7 +28,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary  px-2 py-3 my-2 space-x-2">
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-3">
           <label htmlFor="height">Height</label>
           <input
             onChange={(e) =>
@@ -43,7 +43,7 @@ const BMR = () => {
           />
         </div>
 
-        <div className="border border-secondary rounded-2xl shadow-xl bg-primary px-2 py-3 my-2 space-x-4">
+        <div className="border border-secondary rounded-2xl shadow-xl bg-primary w-full px-2 py-3 my-2 space-x-4">
           <label className="pl-4" htmlFor="age">
             Age
           </label>
@@ -60,8 +60,8 @@ const BMR = () => {
           />
         </div>
 
-        <div className="flex border border-secondary rounded-2xl shadow-xl bg-primary p-3 space-x-3 my-2">
-          <label className="font-bold">Gender:</label>
+        <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary p-3 space-x-3 my-2 w-full">
+          <label className="font-bold">Gender :</label>
           <div className=" space-x-1">
             <input
               className="cursor-pointer"
@@ -83,7 +83,7 @@ const BMR = () => {
           </div>
           <div className=" space-x-1 cursor-pointer">
             <input
-              className="cursor-pointer"
+              className=" cursor-pointer"
               type="radio"
               name="gender"
               value="female"

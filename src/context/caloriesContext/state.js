@@ -3,9 +3,9 @@ const actions = {
 };
 
 const initialState = {
-  weight: null,
-  height: null,
-  age: null,
+  weight: 0,
+  height: 0,
+  age: 0,
   gender: "male",
   bmr: 0,
   basicNeedsInput: null,
