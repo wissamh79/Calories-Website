@@ -1,21 +1,26 @@
 import React from "react";
 import useCalories from "../context/caloriesContext/useCalories";
 import { actions } from "../context/caloriesContext/state";
+import { useTranslation } from "react-i18next";
 
 const BMR = () => {
   const {
-    state: { bmr },
+    state: { bmr, dir },
     dispatch,
 
     getBMR,
   } = useCalories();
+  const { t } = useTranslation();
 
   return (
-    <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  ">
+    <div
+      className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  "
+      dir={dir}
+    >
       <form className="flex flex-col items-center justify-center  font-semibold w-full  md:px-2 ">
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full mx-2 px-2 py-3  my-2 ">
           <label className="mx-3" htmlFor="weight">
-            Weight
+            {t("Weight")}
           </label>
           <input
             onChange={(e) =>

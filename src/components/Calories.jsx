@@ -4,7 +4,7 @@ import { actions } from "../context/caloriesContext/state";
 
 const Calories = () => {
   const {
-    state: { bmr, basicNeeds, dailyCalories, activitiesExplain },
+    state: { bmr, basicNeeds, dailyCalories, activitiesExplain, dir },
     dispatch,
     handleActivitiesChange,
 
@@ -14,7 +14,10 @@ const Calories = () => {
   } = useCalories();
 
   return (
-    <div className="  flex flex-col items-center justify-center md:h-[470px]     md:w-[420px] mx-2  ">
+    <div
+      className="  flex flex-col items-center justify-center md:h-[470px]     md:w-[420px] mx-2  "
+      dir={dir}
+    >
       <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-3 md:my-1   px-2  py-3">
         <div>
           <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold   my-2 py-2 space-y-1 md:space-x-3">
