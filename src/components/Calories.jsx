@@ -16,8 +16,8 @@ const Calories = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="  flex flex-col items-center justify-center md:h-[470px]     mx-3  ">
-      <div className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly w-[350px]  md:w-[420px] my-3 md:my-1   px-2  py-3">
+    <div className="  flex flex-col items-center justify-center md:h-[470px]     md:mx-3  ">
+      <div className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly w-[350px]  md:w-[420px] my-3 md:my-1   md:px-2  py-3">
         <form>
           <div className=" ">
             <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold  md:w-full  my-2 py-2 space-y-1 md:space-x-3">
@@ -125,7 +125,7 @@ const Calories = () => {
           </div>
         </form>
       </div>
-      <div className=" border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly w-[350px]  md:w-[420px] mb-5 mt-3  md:my-1 mb-   font-bold px-2 py-3   ">
+      <div className=" border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly w-[350px]  md:w-[420px] mb-5 mt-3  md:my-1 mb-   font-bold md:px-2 py-3   ">
         <form>
           <div className="flex flex-col md:flex-row border border-secondary items-center justify-center rounded-2xl shadow-xl bg-primary my-1 py-1  space-y-1 md:space-x-3">
             <label>{t("Goal")} :</label>
