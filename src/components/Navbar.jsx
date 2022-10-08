@@ -12,16 +12,14 @@ const Navbar = () => {
     dispatch,
   } = useCalories();
   const changeDir = () => {
-    const currentLanguageCode = cookie.get("i18next") || "en";
-
-    currentLanguageCode === "ar"
+    languages === "en"
       ? dispatch({
           type: actions.init,
-          data: { dir: "rtl" },
+          data: { dir: "ltr" },
         })
       : dispatch({
           type: actions.init,
-          data: { dir: "ltr" },
+          data: { dir: "rtl" },
         });
   };
 
@@ -44,15 +42,15 @@ const Navbar = () => {
         <button
           className="bg-button text-btnText rounded-2xl shadow-xl font-bold px-4 p-2 mx-2"
           onClick={() => {
-            i18next.changeLanguage(languages === false ? "en" : "ar");
+            i18next.changeLanguage(languages === "en" ? "ar" : "en");
 
             dispatch({
               type: actions.init,
-              data: { languages: languages === false ? true : false },
+              data: { languages: languages === "en" ? "ar" : "en" },
             });
           }}
         >
-          {languages === false ? "En" : "Ar"}
+          {languages === "en" ? "En" : "Ar"}
         </button>
       </div>
     </div>

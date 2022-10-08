@@ -21,7 +21,7 @@ const initialState = {
   dailyCaloriesInput: 0,
   dailyCalories: 0,
   goal: "loseWeight",
-  languages: false,
+  languages: "en",
   dir: "ltr",
 };
 

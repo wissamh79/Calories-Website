@@ -6,7 +6,7 @@ import cookie from "js-cookie";
 
 const BMR = () => {
   const {
-    state: { bmr, dir },
+    state: { bmr },
     dispatch,
 
     getBMR,
@@ -15,10 +15,7 @@ const BMR = () => {
   const currentLanguageCode = cookie.get("i18next") || "en";
 
   return (
-    <div
-      className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px]  md:w-[420px] my-3  "
-      dir={dir}
-    >
+    <div className=" flex flex-col  border border-secondary items-center justify-center   rounded-2xl shadow-xl bg-primary  mx-2  h-[425px] md:h-[470px] w-[350px] md:w-[420px] my-3  ">
       <form className="flex flex-col items-center justify-center  font-semibold w-full  md:px-2 ">
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full mx-2 px-2 py-3  my-2 ">
           <label
