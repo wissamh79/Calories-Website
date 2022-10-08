@@ -23,11 +23,11 @@ const Calories = () => {
       dir={dir}
     >
       <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-3 md:my-1   px-2  py-3">
-        <div>
-          <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold   my-2 py-2 space-y-1 md:space-x-3">
+        <div className=" mx-2 w-full">
+          <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold px-2  w-full  my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold ">{t("Activities")} : </label>
-            <div className="flex space-x-4">
-              <div className=" space-x-1 mx-1">
+            <div className="flex space-x-1">
+              <div className="  mx-1">
                 <input
                   className="cursor-pointer mx-1"
                   type="radio"
@@ -41,7 +41,7 @@ const Calories = () => {
                   1.2
                 </label>
               </div>
-              <div className=" space-x-1">
+              <div className=" ">
                 <input
                   className="cursor-pointer mx-1"
                   type="radio"
@@ -54,7 +54,7 @@ const Calories = () => {
                   1.3
                 </label>
               </div>
-              <div className=" space-x-1">
+              <div className=" ">
                 <input
                   className="cursor-pointer mx-1"
                   type="radio"
@@ -67,7 +67,7 @@ const Calories = () => {
                   1.5
                 </label>
               </div>
-              <div className=" space-x-1">
+              <div className="">
                 <input
                   className="cursor-pointer mx-1"
                   type="radio"
@@ -80,9 +80,9 @@ const Calories = () => {
                   1.7
                 </label>
               </div>
-              <div className=" space-x-1">
+              <div className=" ">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer mx-2"
                   type="radio"
                   name="gender"
                   value="1.9"
@@ -107,7 +107,7 @@ const Calories = () => {
               onClick={(e) => {
                 getBasicNeeds(e);
               }}
-              className=" my-2 mx-3   p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold h-[50px] w-[250px] md:w-[135px] hover:shadow-2xl"
+              className=" my-2 md:mx-3   p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold h-[50px] w-[250px] md:w-[135px] hover:shadow-2xl"
             >
               {t("Basic Need")}
             </button>
@@ -183,7 +183,7 @@ const Calories = () => {
               onClick={(e) => {
                 getDailyCalories(e);
               }}
-              className=" my-2 mx-3 p-3 bg-button text-btnText rounded-2xl shadow-xl h-[50px]   w-[250px] md:w-[135px] hover:shadow-2xl"
+              className=" my-2 md:mx-3 p-3 bg-button text-btnText rounded-2xl shadow-xl h-[50px]   w-[250px] md:w-[135px] hover:shadow-2xl"
             >
               {t("Daily Calories")}
             </button>
