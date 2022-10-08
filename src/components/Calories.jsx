@@ -26,7 +26,7 @@ const Calories = () => {
         <div className=" mx-3 w-full">
           <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold px-1  w-full  my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold ">{t("Activities")} : </label>
-            <div className="flex space-x-1">
+            <div className="flex mx-1 space-x-3">
               <div className="  mx-1">
                 <input
                   className="cursor-pointer mx-1"
@@ -37,7 +37,7 @@ const Calories = () => {
                   onChange={(e) => handleActivitiesChange(e)}
                   defaultChecked
                 />
-                <label htmlFor="1.2" className="cursor-pointer mx-1">
+                <label htmlFor="1.2" className="cursor-pointer  ">
                   1.2
                 </label>
               </div>
@@ -50,7 +50,7 @@ const Calories = () => {
                   id="1.3"
                   onChange={(e) => handleActivitiesChange(e)}
                 />
-                <label htmlFor="1.3" className="cursor-pointer mx-1">
+                <label htmlFor="1.3" className="cursor-pointer ">
                   1.3
                 </label>
               </div>
@@ -63,7 +63,7 @@ const Calories = () => {
                   id="1.5"
                   onChange={(e) => handleActivitiesChange(e)}
                 />
-                <label htmlFor="1.5" className="cursor-pointer mx-1">
+                <label htmlFor="1.5" className="cursor-pointer ">
                   1.5
                 </label>
               </div>
@@ -76,7 +76,7 @@ const Calories = () => {
                   id="1.7"
                   onChange={(e) => handleActivitiesChange(e)}
                 />
-                <label htmlFor="1.7" className="cursor-pointer mx-1">
+                <label htmlFor="1.7" className="cursor-pointer ">
                   1.7
                 </label>
               </div>
