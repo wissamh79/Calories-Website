@@ -27,9 +27,9 @@ const Calories = () => {
           <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold px-1  w-full  my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold ">{t("Activities")} : </label>
             <div className="flex mx-1 space-x-3">
-              <div className="  mx-1">
+              <div className=" ">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer "
                   type="radio"
                   name="gender"
                   value="1.2"
@@ -43,7 +43,7 @@ const Calories = () => {
               </div>
               <div className=" ">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer "
                   type="radio"
                   name="gender"
                   value="1.375"
@@ -56,7 +56,7 @@ const Calories = () => {
               </div>
               <div className=" ">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer "
                   type="radio"
                   name="gender"
                   value="1.55"
@@ -69,7 +69,7 @@ const Calories = () => {
               </div>
               <div className="">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer "
                   type="radio"
                   name="gender"
                   value="1.725"
@@ -82,7 +82,7 @@ const Calories = () => {
               </div>
               <div className=" ">
                 <input
-                  className="cursor-pointer mx-1"
+                  className="cursor-pointer "
                   type="radio"
                   name="gender"
                   value="1.9"
