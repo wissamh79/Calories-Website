@@ -1,3 +1,6 @@
+import cookie from "js-cookie";
+const currentLanguageCode = cookie.get("i18next") || "en";
+
 const actions = {
   init: "INIT",
 };
@@ -8,10 +11,13 @@ const initialState = {
   age: 0,
   gender: "male",
   bmr: 0,
-  basicNeedsInput: null,
+  basicNeedsInput: 0,
   basicNeeds: 0,
   activities: 1.2,
-  activitiesExplain: "Inactive don't exercise light office activity",
+  activitiesExplain:
+    currentLanguageCode === "ar"
+      ? "غير نشط لا تتمرن نشاط مكتبي خفيف"
+      : "Inactive don't exercise light office activity",
   dailyCaloriesInput: 0,
   dailyCalories: 0,
   goal: "loseWeight",

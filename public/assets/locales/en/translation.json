@@ -1,3 +1,22 @@
 {
-  "Weight": "Weight"
+	"1.2": "Inactive don't exercise light office activity",
+	"1.3": "Light sport from 1 to 3 days",
+	"1.5": "Medium sport from 3 to 5 days",
+	"1.7": "High intensity sport from 6 to 7 days",
+	"1.9": "Professional player daily aerobic activities and resistance",
+	"Activities": "Activities",
+	"Age": "Age",
+	"BMR": "BMR",
+	"Basic Need": "Basic Need",
+	"Daily Calories": "Daily Calories",
+	"Female": "Female",
+	"Gain Weight": "Gain Weight",
+	"Gender": "Gender",
+	"Goal": "Goal",
+	"Height": "Height",
+	"Lose Weight": "Lose Weight",
+	"Male": "Male",
+	"Number": "Number",
+	"Weight": "Weight",
+	"Your BMR is ?": "Your BMR is ?"
 }

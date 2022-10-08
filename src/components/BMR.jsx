@@ -2,6 +2,7 @@ import React from "react";
 import useCalories from "../context/caloriesContext/useCalories";
 import { actions } from "../context/caloriesContext/state";
 import { useTranslation } from "react-i18next";
+import cookie from "js-cookie";
 
 const BMR = () => {
   const {
@@ -11,6 +12,7 @@ const BMR = () => {
     getBMR,
   } = useCalories();
   const { t } = useTranslation();
+  const currentLanguageCode = cookie.get("i18next") || "en";
 
   return (
     <div
@@ -19,7 +21,10 @@ const BMR = () => {
     >
       <form className="flex flex-col items-center justify-center  font-semibold w-full  md:px-2 ">
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full mx-2 px-2 py-3  my-2 ">
-          <label className="mx-3" htmlFor="weight">
+          <label
+            className={currentLanguageCode === "en" ? "mx-3" : " mx-4"}
+            htmlFor="weight"
+          >
             {t("Weight")}
           </label>
           <input
@@ -37,7 +42,7 @@ const BMR = () => {
 
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full  px-2 py-3 my-2 ">
           <label className="mx-3" htmlFor="height">
-            Height
+            {t("Height")}
           </label>
           <input
             onChange={(e) =>
@@ -53,8 +58,11 @@ const BMR = () => {
         </div>
 
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full  px-2 py-3 my-2 space-x-6">
-          <label className="pl-5" htmlFor="age">
-            Age
+          <label
+            className={currentLanguageCode === "en" ? "pl-5" : "pr-5 mx-4"}
+            htmlFor="age"
+          >
+            {t("Age")}
           </label>
           <input
             onChange={(e) =>
@@ -70,10 +78,10 @@ const BMR = () => {
         </div>
 
         <div className="flex items-center justify-center border border-secondary rounded-2xl shadow-xl bg-primary w-[300px] md:w-full p-3 space-x-4 my-2 ">
-          <label className="font-bold">Gender :</label>
-          <div className=" space-x-1">
+          <label className="font-bold mx-1">{t("Gender")} : </label>
+          <div className={" space-x-1"}>
             <input
-              className="cursor-pointer"
+              className="cursor-pointer mx-1"
               type="radio"
               name="gender"
               value="male"
@@ -87,12 +95,12 @@ const BMR = () => {
               defaultChecked
             />
             <label htmlFor="male" className="cursor-pointer">
-              Male
+              {t("Male")}
             </label>
           </div>
           <div className=" space-x-1 cursor-default md:cursor-pointer">
             <input
-              className=" cursor-pointer"
+              className=" cursor-pointer mx-1"
               type="radio"
               name="gender"
               value="female"
@@ -105,7 +113,7 @@ const BMR = () => {
               }
             />
             <label htmlFor="female" className="cursor-pointer">
-              Female
+              {t("Female")}
             </label>
           </div>
         </div>
@@ -117,7 +125,7 @@ const BMR = () => {
             }}
             className=" w-[150px] my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl font-bold cursor-pointer hover:shadow-2xl"
           >
-            BMR
+            {t("BMR")}
           </button>
           <div className="border border-secondary items-center justify-center text-center rounded-2xl shadow-xl bg-primary w-[100px] my-3 py-2 ">
             <p className=" text-1xl text-center font-bold  ">{bmr}</p>

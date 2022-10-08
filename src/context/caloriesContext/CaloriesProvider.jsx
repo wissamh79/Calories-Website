@@ -1,11 +1,13 @@
 import { useReducer } from "react";
 import { reducer, actions, initialState } from "./state";
 import CaloriesContext from "./CaloriesContext";
+import { useTranslation } from "react-i18next";
 
 import React from "react";
 
 const CaloriesProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { t } = useTranslation();
 
   const getBMR = (e) => {
     e.preventDefault();
@@ -61,8 +63,7 @@ const CaloriesProvider = ({ children }) => {
           dispatch({
             type: actions.init,
             data: {
-              activitiesExplain:
-                "Inactive don't exercise light office activity",
+              activitiesExplain: t("1.2"),
             },
           });
           break;
@@ -71,7 +72,7 @@ const CaloriesProvider = ({ children }) => {
           dispatch({
             type: actions.init,
             data: {
-              activitiesExplain: "Light sport from 1 to 3 days",
+              activitiesExplain: t("1.3"),
             },
           });
           break;
@@ -79,7 +80,7 @@ const CaloriesProvider = ({ children }) => {
           dispatch({
             type: actions.init,
             data: {
-              activitiesExplain: "Medium sport from 3 to 5 days",
+              activitiesExplain: t("1.5"),
             },
           });
           break;
@@ -87,7 +88,7 @@ const CaloriesProvider = ({ children }) => {
           dispatch({
             type: actions.init,
             data: {
-              activitiesExplain: "High intensity sport from 6 to 7 days",
+              activitiesExplain: t("1.7"),
             },
           });
 
@@ -96,8 +97,7 @@ const CaloriesProvider = ({ children }) => {
           dispatch({
             type: actions.init,
             data: {
-              activitiesExplain:
-                "Professional player daily aerobic activities and resistance",
+              activitiesExplain: t("1.9"),
             },
           });
           break;

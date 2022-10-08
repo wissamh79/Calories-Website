@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -25,16 +25,15 @@ i18n
     backend: {
       loadPath: "/assets/locales/{{lng}}/translation.json",
     },
-    react: {
-      useSuspense: false,
-    },
   });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Suspense>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Suspense>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -29,8 +29,8 @@ const Navbar = () => {
     /* eslint-disable-next-line*/ changeDir();
   }, [languages]);
   return (
-    <div className="border border-secondary rounded-2xl shadow-xl bg-primary  md:max-w-[1140px] w-[360px] sm:w-full flex items-center mx-4   my-3">
-      <div className="flex justify-start  w-[49%] ">
+    <div className="border border-secondary rounded-2xl shadow-xl bg-primary  md:max-w-[1140px] w-[360px] sm:w-full flex items-center mx-4   my-3 space-x-2">
+      <div className="flex justify-start w-[60%] md:w-[49%] ">
         <p className="border border-secondary rounded-2xl shadow-xl bg-primary text-center font-semibold px-2 py-4 ">
           <span className="bg-button text-btnText rounded-2xl shadow-xl font-bold px-4 p-2 mx-2">
             Calories
@@ -38,11 +38,11 @@ const Navbar = () => {
           Calculator
         </p>
       </div>
-      <div className="flex justify-between w-[51%] ">
+      <div className="flex justify-between w-[40%] md:w-[51%] px-2">
         <ThemeToggle />
 
         <button
-          className="bg-button text-btnText rounded-2xl shadow-xl font-bold px-4 p-2 mx-4"
+          className="bg-button text-btnText rounded-2xl shadow-xl font-bold px-4 p-2 mx-2"
           onClick={() => {
             i18next.changeLanguage(languages === false ? "en" : "ar");
 
