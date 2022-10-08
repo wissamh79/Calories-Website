@@ -23,8 +23,8 @@ const Calories = () => {
       dir={dir}
     >
       <form className="border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly sm:w-full my-3 md:my-1   px-2  py-3">
-        <div className=" mx-2 w-full">
-          <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold px-2  w-full  my-2 py-2 space-y-1 md:space-x-3">
+        <div className=" mx-3 w-full">
+          <div className=" flex flex-col md:flex-row border border-secondary  items-center justify-center rounded-2xl shadow-xl bg-primary font-semibold px-1  w-full  my-2 py-2 space-y-1 md:space-x-3">
             <label className="font-bold ">{t("Activities")} : </label>
             <div className="flex space-x-1">
               <div className="  mx-1">
@@ -76,13 +76,13 @@ const Calories = () => {
                   id="1.7"
                   onChange={(e) => handleActivitiesChange(e)}
                 />
-                <label htmlFor="1.7" className="cursor- mx-1">
+                <label htmlFor="1.7" className="cursor-pointer mx-1">
                   1.7
                 </label>
               </div>
               <div className=" ">
                 <input
-                  className="cursor-pointer mx-2"
+                  className="cursor-pointer mx-1"
                   type="radio"
                   name="gender"
                   value="1.9"
