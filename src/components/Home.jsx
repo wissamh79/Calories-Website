@@ -2,7 +2,6 @@ import React from "react";
 import BMR from "./BMR";
 import Calories from "./Calories";
 import useCalories from "../context/caloriesContext/useCalories";
-import { actions } from "../context/caloriesContext/state";
 
 const Home = () => {
   const {

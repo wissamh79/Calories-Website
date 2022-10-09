@@ -3,7 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 import useCalories from "../context/caloriesContext/useCalories";
 import { actions } from "../context/caloriesContext/state";
 import i18next from "i18next";
-import cookie from "js-cookie";
+
 // import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const Navbar = () => {
