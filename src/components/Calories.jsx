@@ -114,7 +114,7 @@ const Calories = () => {
                     data: { basicNeedsInput: e.target.value },
                   })
                 }
-                className=" my-2  bg-primary border border-input rounded-2xl shadow-xl h-[50px] w-[250px] md:w-[200px]   py-2 text-center"
+                className=" my-2  bg-primary border border-input rounded-2xl shadow-xl h-[50px] w-[250px] md:w-[200px] px-2   py-2 text-center"
                 type="number"
                 placeholder={bmr ? bmr : t("Your BMR is ?")}
               />
@@ -126,7 +126,11 @@ const Calories = () => {
         </form>
       </div>
       <div className=" border border-secondary rounded-2xl shadow-xl bg-primary flex flex-col items-center justify-evenly w-[350px]  md:w-[420px] mb-5 mt-3  md:my-1 mb-   font-bold md:px-2 py-3   ">
-        <form>
+        <form
+          onSubmit={(e) => {
+            getDailyCalories(e);
+          }}
+        >
           <div className="flex flex-col md:flex-row border border-secondary items-center justify-center rounded-2xl shadow-xl bg-primary my-1 py-1  space-y-1 md:space-x-3">
             <label>{t("Goal")} :</label>
             <div className="flex items-center justify-center  space-x-4 ">
@@ -176,12 +180,7 @@ const Calories = () => {
             </div>
           </div>
           <div className="flex flex-col-reverse md:flex-row border border-secondary rounded-2xl shadow-xl bg-primary px-6 md:px-4 py-1  my-2 md:space-x-2">
-            <button
-              onClick={(e) => {
-                getDailyCalories(e);
-              }}
-              className=" my-2 md:mx-3 p-3 bg-button text-btnText rounded-2xl shadow-xl h-[50px]   w-[250px] md:w-[135px] hover:shadow-2xl"
-            >
+            <button className=" my-2 md:mx-3 p-3 bg-button text-btnText rounded-2xl shadow-xl h-[50px]   w-[250px] md:w-[135px] hover:shadow-2xl">
               {t("Daily Calories")}
             </button>
             <input
@@ -194,6 +193,7 @@ const Calories = () => {
                   data: { dailyCaloriesInput: e.target.value },
                 })
               }
+              required
             />
           </div>
 

@@ -12,41 +12,31 @@ const CaloriesProvider = ({ children }) => {
   const getBMR = (e) => {
     e.preventDefault();
     try {
-      if (state.weight === 0 || state.height === 0 || state.age === 0) {
-        dispatch({
-          type: actions.init,
-          data: { bmr: 0 },
-        });
-      } else {
-        switch (state.gender) {
-          case "male":
-            dispatch({
-              type: actions.init,
-              data: {
-                bmr:
-                  13.8 * state.weight + 5 * state.height - 6.8 * state.age + 66,
-              },
-            });
+      switch (state.gender) {
+        case "male":
+          dispatch({
+            type: actions.init,
+            data: {
+              bmr:
+                13.8 * state.weight + 5 * state.height - 6.8 * state.age + 66,
+            },
+          });
 
-            break;
-          case "female":
-            dispatch({
-              type: actions.init,
-              data: {
-                bmr:
-                  9.6 * state.weight +
-                  1.8 * state.height -
-                  4.7 * state.age +
-                  655,
-              },
-            });
-            break;
+          break;
+        case "female":
+          dispatch({
+            type: actions.init,
+            data: {
+              bmr:
+                9.6 * state.weight + 1.8 * state.height - 4.7 * state.age + 655,
+            },
+          });
+          break;
 
-          default:
-            break;
-        }
-        console.log(state.weight);
+        default:
+          break;
       }
+      console.log(state.weight);
     } catch (e) {
       console.log(e.massage);
     }
@@ -141,35 +131,30 @@ const CaloriesProvider = ({ children }) => {
   const getDailyCalories = (e) => {
     try {
       e.preventDefault();
-      if (state.dailyCaloriesInput) {
-        switch (state.goal) {
-          case "loseWeight":
-            dispatch({
-              type: actions.init,
-              data: {
-                dailyCalories:
-                  parseInt(state.basicNeeds) -
-                  parseInt(state.dailyCaloriesInput),
-              },
-            });
 
-            break;
-          case "gainWeight":
-            dispatch({
-              type: actions.init,
-              data: {
-                dailyCalories:
-                  parseInt(state.basicNeeds) +
-                  parseInt(state.dailyCaloriesInput),
-              },
-            });
-            break;
+      switch (state.goal) {
+        case "loseWeight":
+          dispatch({
+            type: actions.init,
+            data: {
+              dailyCalories:
+                parseInt(state.basicNeeds) - parseInt(state.dailyCaloriesInput),
+            },
+          });
 
-          default:
-            break;
-        }
-      } else {
-        return;
+          break;
+        case "gainWeight":
+          dispatch({
+            type: actions.init,
+            data: {
+              dailyCalories:
+                parseInt(state.basicNeeds) + parseInt(state.dailyCaloriesInput),
+            },
+          });
+          break;
+
+        default:
+          break;
       }
     } catch (e) {
       console.log(e.massage);
